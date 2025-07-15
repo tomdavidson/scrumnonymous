@@ -40,7 +40,7 @@ import { Icon } from 'astro-icon/components'
     const dropdownMenus = [...document.querySelectorAll('.has-dropdown button')] as HTMLButtonElement[]
 
     // functions
-    const setActiveMenuItem = (): void => {
+        const setActiveMenuItem = (): void => {
       const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
       const currentPath = window.location.pathname + window.location.hash
 
@@ -54,6 +54,77 @@ import { Icon } from 'astro-icon/components'
           }
         })
       })
+    }
+
+    const clearActiveMenuItems = (): void => {
+      const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
+      mobileDesktopMenus.forEach((menu) => {
+        const menuItems = [...menu.querySelectorAll('a')] as HTMLAnchorElement[]
+        menuItems.forEach((menuItem) => {
+          menuItem.classList.remove('is-active')
+          menuItem.removeAttribute('aria-current')
+        })
+      })
+    }
+
+    const setActiveMenuItemBySection = (sectionId: string): void => {
+      clearActiveMenuItems()
+      const mobileDesktopMenus = mainNav.querySelectorAll('nav > ul')
+
+      mobileDesktopMenus.forEach((menu) => {
+        const menuItems = [...menu.querySelectorAll('a')] as HTMLAnchorElement[]
+        menuItems.forEach((menuItem) => {
+          const href = menuItem.getAttribute('href')
+          if (href === `#${sectionId}` || (sectionId === 'home' && href === '/')) {
+            menuItem.classList.add('is-active')
+            menuItem.setAttribute('aria-current', 'page')
+          }
+        })
+      })
+    }
+
+    const setupScrollSpy = (): void => {
+      const sections = document.querySelectorAll('section[id], div[id]')
+      const options = {
+        root: null,
+        rootMargin: '-20% 0px -80% 0px', // Trigger when section is 20% from top
+        threshold: 0
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id
+            if (sectionId) {
+              setActiveMenuItemBySection(sectionId)
+            }
+          }
+        })
+
+        // If no sections are intersecting (e.g., at top of page), activate home
+        const anyIntersecting = entries.some(entry => entry.isIntersecting)
+        if (!anyIntersecting) {
+          setActiveMenuItemBySection('home')
+        }
+      }, options)
+
+      sections.forEach((section) => {
+        if (section.id) {
+          observer.observe(section)
+        }
+      })
+
+      // Handle the case when we're at the very top of the page
+      const handleScroll = () => {
+        if (window.scrollY < 100) {
+          setActiveMenuItemBySection('home')
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll)
+
+      // Initial check
+      handleScroll()
     }
 
     const isOutOfViewport = (element: Element): boolean => {
