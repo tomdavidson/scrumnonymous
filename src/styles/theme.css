@@ -1,0 +1,27 @@
+:root {
+  --dun: #d6c8a6;
+  --parchment-1: #ebe4ca;
+  --feldgrau: #42544b;
+  --parchment-2: #efe7ce;
+  --ebony: #444d41;
+
+  --background-color: var(--parchment-1);
+  --foreground-color: var(--ebony);
+  --primary-color: var(--feldgrau);
+  --secondary-color: var(--dun);
+  --link-color: var(--feldgrau);
+  --border-color: var(--dun);
+  --border-color-subtle: var(--parchment-2);
+  --text-color-inverted: var(--parchment-1);
+}
+
+.darkmode {
+  --background-color: var(--ebony);
+  --foreground-color: var(--parchment-1);
+  --primary-color: var(--feldgrau);
+  --secondary-color: var(--dun);
+  --link-color: var(--parchment-1);
+  --border-color: var(--dun);
+  --border-color-subtle: var(--feldgrau);
+  --text-color-inverted: var(--ebony);
+}

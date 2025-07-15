@@ -1,0 +1,73 @@
+---
+import { steps } from '../content/12-steps.js';
+---
+
+<div class="steps__grid">
+  {steps.map(step => (
+    <div class="step-card">
+      <div class="step-card__header">
+        <div class="step-card__number">{step.number}</div>
+        <h3 class="step-card__title">{step.title}</h3>
+      </div>
+      <div class="step-card__content" set:html={step.content
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')}
+      />
+    </div>
+  ))}
+</div>
+
+<style>
+.steps__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.step-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.step-card__number {
+  background-color: var(--primary-color);
+  color: var(--text-color-inverted);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.step-card__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.step-card__content {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+</style>

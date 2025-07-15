@@ -7,5 +7,6 @@
       "@layouts/*": ["src/layouts/*"],
       "@assets/*": ["src/assets/*"]
     }
-  }
+  },
+  "exclude": ["src/pages/accessibility-statement.astro"]
 }

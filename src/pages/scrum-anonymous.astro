@@ -1,17 +1,13 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import Hero from '@components/ScrumHero.astro'
+import ScrumHero from '@components/ScrumHero.astro'
 import Feature from '@components/Feature.astro'
-import Counter from '@components/Counter.astro'
-import ContentMedia from '@components/ContentMedia.astro'
-import { steps } from '../content/12-steps.js'
-import ExternalLink from '@components/ExternalLink.astro'
 import CallToAction from '@components/CallToAction.astro'
-import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-components'
+import { steps } from '../content/12-steps.js';
 ---
 
-<DefaultLayout title="Home">
-  <Hero />
+<DefaultLayout title="Scrum-aholics Anonymous">
+  <ScrumHero />
   <section class="my-24">
     <div class="container">
       <img src="/the-path.webp" alt="The path from scrum to lean" class="w-full" />
@@ -19,14 +15,13 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-
   </section>
   <section class="my-64" id="12-steps">
     <div class="container">
-      <h2 class="mb-16 text-6xl">A Program for Scrum Recovery</h2>
+      <h2 class="mb-16 text-6xl">The 12 Steps to Recovery</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         {steps.map(step => (
           <Feature icon={step.icon} title={step.title} number={step.number}>
             <Fragment set:html={step.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')} />
           </Feature>
         ))}
-      </div>
       </div>
     </div>
   </section>
@@ -39,11 +34,3 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-
     />
   </div>
 </DefaultLayout>
-
-<style>
-  .avatar {
-    border: 1px solid var(--border-color-subtle);
-    border-radius: var(--radius-md);
-    padding: var(--space-s);
-  }
-</style>
