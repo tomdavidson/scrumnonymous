@@ -101,7 +101,49 @@ const currentYear = new Date().getFullYear()
   section {
     border-top: 1px solid var(--border-color-subtle);
   }
+
   a:hover {
     color: var(--link-hover-color);
+  }
+
+  .copyright-info,
+  .attribution-info {
+    flex: 1;
+    min-width: 0; /* Allow flex items to shrink */
+  }
+
+  .cc-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 0.2rem;
+  }
+
+  .cc-icon {
+    max-width: 1em;
+    max-height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Mobile-specific adjustments */
+  @media (max-width: 768px) {
+    .copyright-info,
+    .attribution-info {
+      text-align: center;
+    }
+
+    .copyright-info p,
+    .attribution-info p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+
+  /* Large screen adjustments */
+  @media (min-width: 768px) {
+    .attribution-info {
+      text-align: right;
+    }
   }
 </style>
