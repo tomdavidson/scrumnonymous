@@ -146,8 +146,14 @@ const currentYear = new Date().getFullYear()
     }
   }
 
-  /* Large screen adjustments */
+    /* Large screen adjustments */
   @media (min-width: 768px) {
+    .footer-attribution-container {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 33%; /* 33% of container width gap */
+    }
+
     .attribution-info {
       text-align: right;
     }
