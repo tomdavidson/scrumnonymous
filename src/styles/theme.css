@@ -4,13 +4,16 @@
   --feldgrau: #42544b;
   --parchment-2: #efe7ce;
   --ebony: #444d41;
+  --brand-primary: #d648ff;
+  --brand-secondary: #00d1b7;
 
   --background-color: var(--parchment-1);
   --foreground-color: var(--ebony);
   --primary-color: var(--feldgrau);
   --secondary-color: var(--dun);
   --link-color: var(--feldgrau);
-  --border-color: var(--dun);
+  --link-hover-color: var(--brand-primary);
+  --border-color: var(--brand-secondary);
   --border-color-subtle: var(--parchment-2);
   --text-color-inverted: var(--parchment-1);
 }
@@ -21,7 +24,8 @@
   --primary-color: var(--feldgrau);
   --secondary-color: var(--dun);
   --link-color: var(--parchment-1);
-  --border-color: var(--dun);
+  --link-hover-color: var(--brand-secondary);
+  --border-color: var(--brand-primary);
   --border-color-subtle: var(--feldgrau);
   --text-color-inverted: var(--ebony);
 }
