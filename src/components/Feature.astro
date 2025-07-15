@@ -24,16 +24,18 @@ interface Props {
 const { icon = 'mdi:rocket', title = 'Title', number }: Props = Astro.props
 ---
 
-<div class="feature flex flex-col gap-4">
+<div class="feature">
   {number && <span class="step-number">{number}</span>}
-  <div class="icon-container">
-    <Icon name={icon} />
-  </div>
-  <div class="content">
-    <h3 class="text-2xl font-bold">{title}</h3>
-    <p>
-      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, corporis.</slot>
-    </p>
+  <div class="feature-content">
+    <div class="icon-container">
+      <Icon name={icon} />
+    </div>
+    <div class="content">
+      <h3 class="text-2xl font-bold">{title}</h3>
+      <p>
+        <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, corporis.</slot>
+      </p>
+    </div>
   </div>
 </div>
 
