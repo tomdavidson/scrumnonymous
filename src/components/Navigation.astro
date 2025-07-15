@@ -277,6 +277,7 @@ import { Icon } from 'astro-icon/components'
       color: var(--foreground-color);
     }
 
+
     nav {
       > ul {
         display: flex;
@@ -294,8 +295,9 @@ import { Icon } from 'astro-icon/components'
         .has-dropdown > button:hover,
         .has-dropdown > button:focus-visible {
           text-decoration: underline;
-          text-decoration-style: wavy;
+          text-decoration-style: double;
           text-decoration-thickness: 1px;
+          text-decoration-color: var(--link-hover-color);
           text-underline-offset: 7px;
         }
 

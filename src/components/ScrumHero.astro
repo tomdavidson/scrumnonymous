@@ -27,7 +27,7 @@ import { Icon } from 'astro-icon/components'
           </a>
         </div>
       </div>
-      <Image class="hidden lg:block" src="/dumpster-fire.webp" alt="A dumpster fire representing scrum" decoding="async" width={600} height={450} loading="eager" />
+      <Image class="hidden lg:block" src="/dumpster-fire.webp" alt="A dumpster fire representing Scrum's impact on agile." decoding="async" width={600} height={450} loading="eager" />
     </div>
   </div>
 </section>
@@ -60,3 +60,12 @@ import { Icon } from 'astro-icon/components'
     color: var(--ebony);
     border-color: var(--dun);
   }
+
+  .button:hover {
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: var(--link-hover-color);
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
+  }
+</style>
