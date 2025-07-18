@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import AnthologyCard from '../../components/AnthologyCard.astro'
+import PageHeader from '../../components/PageHeader.astro'
 import type { CollectionEntry } from 'astro:content'
 
 const posts = (await getCollection('anthologies')).sort(
@@ -10,7 +11,11 @@ const posts = (await getCollection('anthologies')).sort(
 ---
 
 <DefaultLayout title="Anthologies">
-  <section class="anthologies-grid">
+  <PageHeader
+    title="Anthologies"
+    subtitle="A curated collection of articles and talks on the perils of Scrum and the path to Lean-Agile."
+  />
+  <section class="anthologies-grid py-16 sm:py-20">
     <div class="container">
       <div class="grid-container">
         {posts.map((post) => <AnthologyCard anthology={post} />)}
@@ -20,10 +25,6 @@ const posts = (await getCollection('anthologies')).sort(
 </DefaultLayout>
 
 <style>
-  .anthologies-grid {
-    padding: 4rem 0;
-  }
-
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -46,7 +47,7 @@ const posts = (await getCollection('anthologies')).sort(
 
   @media (min-width: 1200px) {
     .grid-container {
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2.5rem;
     }
   }
