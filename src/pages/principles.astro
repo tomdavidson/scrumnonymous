@@ -1,0 +1,30 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import Feature from '@components/Feature.astro'
+import PageHeader from '@components/PageHeader.astro'
+import { principles } from '../content/lsd-principles.js'
+---
+
+<DefaultLayout title="The 7 LSD Principles">
+  <PageHeader
+    title="The 7 LSD Principles"
+    subtitle="Lean Software Development (LSD) is a set of principles for developing software that is based on the principles of lean manufacturing."
+  />
+  <section class="my-24">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        {
+          principles.map((principle: { icon: string; title: string; number: number; content: string }) => (
+            <Feature icon={principle.icon} title={principle.title} number={principle.number}>
+              <Fragment
+                set:html={principle.content
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .replace(/\*(.*?)\*/g, '<em>$1</em>')}
+              />
+            </Feature>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

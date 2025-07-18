@@ -2,12 +2,8 @@
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/ScrumHero.astro'
 import Feature from '@components/Feature.astro'
-import Counter from '@components/Counter.astro'
-import ContentMedia from '@components/ContentMedia.astro'
 import { steps } from '../content/12-steps.js'
-import ExternalLink from '@components/ExternalLink.astro'
 import CallToAction from '@components/CallToAction.astro'
-import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-components'
 ---
 
 <DefaultLayout title="Home">
@@ -21,24 +17,29 @@ import { Accordion, AccordionItem, Avatar, AvatarGroup } from 'accessible-astro-
     <div class="container">
       <h2 class="mb-16 text-6xl">A Program for Scrum Recovery</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        {steps.map(step => (
-          <Feature icon={step.icon} title={step.title} number={step.number}>
-            <Fragment set:html={step.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>')} />
-          </Feature>
-        ))}
-      </div>
+        {
+          steps.map((step) => (
+            <Feature icon={step.icon} title={step.title} number={step.number}>
+              <Fragment
+                set:html={step.content
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .replace(/\*(.*?)\*/g, '<em>$1</em>')}
+              />
+            </Feature>
+          ))
+        }
       </div>
     </div>
   </section>
-  <div id="get-help">
-    <CallToAction 
-      title="Need a Sponsor?"
-      content="If you feel the sprint treadmill dragging you back, hey@scrumnonymous.org. Volunteers are standing by with Monte Carlo spreadsheets, Kanban, and a shoulder to cry on when someone schedules yet another backlog-refinement session.<br/><br/>Together we can stay Scrum-free—one day, one flow unit at a time."
-      link="mailto:hey@scrumnonymous.org"
-      linkText="Contact"
-    />
-  </div>
 </DefaultLayout>
+<div id="get-help">
+  <CallToAction
+    title="Need a Sponsor?"
+    content="If you feel the sprint treadmill dragging you back, hey@scrumnonymous.org. Volunteers are standing by with Monte Carlo spreadsheets, Kanban, and a shoulder to cry on when someone schedules yet another backlog-refinement session.<br/><br/>Together we can stay Scrum-free—one day, one flow unit at a time."
+    link="mailto:hey@scrumnonymous.org"
+    linkText="Contact"
+  />
+</div>
 
 <style>
   .avatar {

@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content'
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import PageHeader from '../../components/PageHeader.astro'
+import ExternalLink from '../../components/ExternalLink.astro'
+export async function getStaticPaths() {
+  const anthologies = await getCollection('anthologies')
+  return anthologies.map((anthology) => ({
+    params: { slug: anthology.slug },
+    props: anthology,
+  }))
+}
+
+import type { CollectionEntry } from 'astro:content'
+const anthology: CollectionEntry<'anthologies'> = Astro.props
+const { Content } = await anthology.render()
+---
+
+<DefaultLayout title={anthology.data.title}>
+  <PageHeader title={anthology.data.title} subtitle={`by ${anthology.data.author}`} />
+  <section class="my-24">
+    <div class="container">
+      {
+        anthology.data.image && !anthology.data.featuredMedia && (
+          <img src={anthology.data.image} alt={anthology.data.imageAlt} class="mb-8 rounded-lg" />
+        )
+      }
+      <div class="prose">
+        <Content />
+      </div>
+      <p class="mt-8">
+        <ExternalLink href={anthology.data.originUrl}> The original. </ExternalLink>
+      </p>
+    </div>
+  </section>
+</DefaultLayout>

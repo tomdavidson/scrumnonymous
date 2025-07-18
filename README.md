@@ -80,6 +80,38 @@ We welcome contributions to improve the documentation! You can help by:
 3. [Starting a discussion](https://github.com/incluud/accessible-astro-starter/discussions)
 4. [Supporting on Open Collective](https://opencollective.com/incluud)
 
+### Contributing to the Anthology
+
+To add your own story to the "Anthology" section, follow these steps:
+
+1.  **Create a new MDX file** in the `src/content/anthologies/` directory. The filename should be a slug-style version of your title (e.g., `my-scrum-recovery-story.mdx`).
+2.  **Add the following frontmatter** to the top of your file. The `title`, `author`, and `description` fields are optional and will be automatically populated from the `source` URL if left blank.
+
+    ```yaml
+    ---
+    title: "My Scrum Recovery Story"
+    author: "Your Name"
+    description: "A brief summary of your story."
+    pubDate: YYYY-MM-DD
+    source: "https://your-original-article-url.com"
+    featuredMedia: "youtube:your-video-id"
+    ---
+    ```
+
+3.  **Write your story** in MDX below the frontmatter. You can include standard Markdown formatting, as well as embed components like YouTube videos.
+
+    To embed a YouTube video, first import the `YouTube` component, then use it in your content. Make sure the `id` matches the one you used in the `featuredMedia` field.
+
+    ```jsx
+    ---
+    import YouTube from '../../components/YouTube.astro';
+    ---
+
+    <YouTube id="your-video-id" />
+    ```
+
+4.  **Submit a pull request** with your new file. We'll review it and, if it's a good fit, merge it into the site.
+
 ## Support this project
 
 Your support helps us cover basic costs and continue building accessible solutions for the Astro ecosystem. By becoming a sponsor, you're not just supporting code – you're helping create a more inclusive web for everyone. Every contribution, big or small, helps maintain and improve these accessibility-focused tools.

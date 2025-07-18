@@ -2,12 +2,11 @@
 import { Image } from 'astro:assets'
 import { Icon } from 'astro-icon/components'
 import { site } from '../config.mjs'
-
 ---
 
 <section class="hero my-24">
   <div class="container">
-    <h1 class="text-center text-6xl md:text-left lg:text-8xl mb-8">
+    <h1 class="mb-8 text-center text-6xl md:text-left lg:text-8xl">
       <span class="text-gradient">{site.title}</span>
     </h1>
     <div class="grid grid-cols-1 items-start gap-24 lg:grid-cols-2">
@@ -16,58 +15,63 @@ import { site } from '../config.mjs'
           Scrum ceremonies piling up like empty pizza boxes? Sprint burndown giving you heartburn?
         </p>
         <p class="text-center md:text-left">
-          Welcome to Scrum-aholics Anonymous, where we admit we're powerless over capital-A Agile and decide to hand our schedules—and sanity—over to Lean Software Development (LSD).
+          Welcome to Scrum-aholics Anonymous, where we admit we're powerless over capital-A Agile and decide to hand our
+          schedules—and sanity—over to Lean Software Development (LSD).
         </p>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="#12-steps">
+          <a class="button has-icon" href="/#12-steps">
             <Icon name="lucide:list-checks" />
             The 12 Steps
           </a>
-          <a class="button has-icon color-secondary" href="#get-help">
+          <a class="button has-icon color-secondary" href="/#get-help">
             <Icon name="lucide:life-buoy" />
             Get Help
           </a>
         </div>
       </div>
-      <Image class="hidden lg:block" src="/dumpster-fire.webp" alt="A dumpster fire representing Scrum's impact on agile." decoding="async" width={600} height={450} loading="eager" />
+      <Image
+        class="hidden lg:block"
+        src="/dumpster-fire.webp"
+        alt="A dumpster fire representing Scrum's impact on agile."
+        decoding="async"
+        width={600}
+        height={450}
+        loading="eager"
+      />
     </div>
   </div>
 </section>
 
 <style lang="scss">
   h1 {
-    text-wrap: balance;
     font-size: clamp(3rem, 10vw, 6rem);
+    text-wrap: balance;
   }
 
   .text-gradient {
-    background: linear-gradient(
-      315deg,
-      var(--dun) 25%,
-      var(--feldgrau)
-    );
+    background: linear-gradient(315deg, var(--dun) 25%, var(--feldgrau));
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .button {
+    border-color: var(--feldgrau);
     background-color: var(--feldgrau);
     color: var(--parchment-1);
-    border-color: var(--feldgrau);
   }
 
   .button.color-secondary {
+    border-color: var(--dun);
     background-color: var(--dun);
     color: var(--ebony);
-    border-color: var(--dun);
   }
 
   .button:hover {
     text-decoration: underline;
     text-decoration-style: double;
     text-decoration-color: var(--link-hover-color);
-    text-underline-offset: 7px;
     text-decoration-thickness: 1px;
+    text-underline-offset: 7px;
   }
 </style>

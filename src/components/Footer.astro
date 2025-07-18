@@ -1,10 +1,7 @@
 ---
-import CallToAction from './CallToAction.astro'
 import ExternalLink from './ExternalLink.astro'
 import Logo from './Logo.astro'
-import ContributorList from './ContributorList.astro';
-
-
+import ContributorList from './ContributorList.astro'
 
 /**
  * Footer Component
@@ -23,7 +20,7 @@ const currentYear = new Date().getFullYear()
         <ContributorList owner="tomdavidson" repo="scrumnonymous" />
       </div>
       <div class="flex flex-col gap-4">
-        <h3 class="text-2xl font-bold">Lean Software Development</h3>     
+        <h3 class="text-2xl font-bold">Lean Software Development</h3>
         <ul class="flex flex-col gap-2">
           <li>
             <ExternalLink href="https://www.netguru.com/blog/lean-software-development/">Netguru</ExternalLink>
@@ -38,38 +35,30 @@ const currentYear = new Date().getFullYear()
       </div>
       <div class="flex flex-col items-end justify-end gap-4">
         <Logo loading="lazy" />
-        <p class="leading-[2]">
-          A 12 step guide to Scrum recovery.
-        </p>
+        <p class="leading-[2]">A 12 step guide to Scrum recovery.</p>
       </div>
     </div>
   </section>
-   
+
   <section class="py-8">
-        <div class="container footer-attribution-container text-center md:text-left">
+    <div class="footer-attribution-container container text-center md:text-left">
       <div class="copyright-info">
         <p class="text-sm leading-relaxed">
           <a href="https://scrumnonymous.org" class="font-medium">Scrumnonymous</a>
           © {currentYear} by <a href="https://creativecommons.org" class="font-medium">Tom Davidson</a> is licensed under
           <a href="https://creativecommons.org/licenses/by/4.0/" class="font-medium">CC BY 4.0</a>
           <span class="cc-icons">
-            <img
-              src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
-              alt=""
-              class="cc-icon"
-            />
-            <img
-              src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
-              alt=""
-              class="cc-icon"
-            />
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" class="cc-icon" />
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" class="cc-icon" />
           </span>
         </p>
       </div>
       <div class="attribution-info">
         <p class="text-sm leading-relaxed md:text-right">
           Made with ❤️ by <a href="https://github.com/tomdavidson" class="font-medium">Tom Davidson</a>
-          with Mark Teekman's <a href="https://astro.build/themes/details/accessible-astro-starter/" class="font-medium">Accessible Astro Starter Theme</a>.
+          with Mark Teekman's <a href="https://astro.build/themes/details/accessible-astro-starter/" class="font-medium"
+            >Accessible Astro Starter Theme</a
+          >.
         </p>
       </div>
     </div>
@@ -85,7 +74,7 @@ const currentYear = new Date().getFullYear()
     color: var(--link-hover-color);
   }
 
-    .footer-attribution-container {
+  .footer-attribution-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -105,10 +94,10 @@ const currentYear = new Date().getFullYear()
   }
 
   .cc-icon {
-    max-width: 1em;
-    max-height: 1em;
     display: inline-block;
     vertical-align: middle;
+    max-width: 1em;
+    max-height: 1em;
   }
 
   /* Mobile-specific adjustments */
@@ -125,7 +114,7 @@ const currentYear = new Date().getFullYear()
     }
   }
 
-    /* Large screen adjustments */
+  /* Large screen adjustments */
   @media (min-width: 768px) {
     .footer-attribution-container {
       flex-direction: row;
