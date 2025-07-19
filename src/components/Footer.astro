@@ -14,18 +14,27 @@ const currentYear = new Date().getFullYear()
 
 <footer>
   <div id="get-help">
-    <CallToAction
-      title="Need a Sponsor?"
-      content="If you feel the sprint treadmill dragging you back, hey@scrumnonymous.org. Volunteers are standing by with Monte Carlo spreadsheets, Kanban, and a shoulder to cry on when someone schedules yet another backlog-refinement session.<br/><br/>Together we can stay Scrum-free—one day, one flow unit at a time."
-      link="mailto:hey@scrumnonymous.org"
-      linkText="Contact"
-    />
+    <CallToAction title="Need a Sponsor?" link="mailto:hey@scrumnonymous.org" linkText="Contact">
+      <div>
+        Start your recovery today with a Lean Sponsor. No ceremonies. No platitudes. Just honest support, one cycle at a
+        time. Connect with a volunteer standing by with:
+      </div>
+
+      <ul class="list-disc pl-8">
+        <li>Evidence-Based Planning and Delivery</li>
+        <li>Unvarnished Transparency and Learning</li>
+        <li>Waste-eliminating Countermeasures</li>
+      </ul>
+      <div slot="cta-footer">
+        <h6>Let’s escape the backlog—together.</h6>
+      </div>
+    </CallToAction>
   </div>
   <section class="py-20">
     <h2 class="sr-only">Footer</h2>
     <div class="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div class="flex flex-col gap-4 lg:col-span-1">
-        <h3 class="text-2xl font-bold">Contributors</h3>
+        <h3 class="text-2xl font-bold">Volunteers</h3>
         <ContributorList owner="tomdavidson" repo="scrumnonymous" />
       </div>
       <div class="flex flex-col gap-4">

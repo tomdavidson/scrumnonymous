@@ -3,7 +3,6 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import Hero from '@components/ScrumHero.astro'
 import Feature from '@components/Feature.astro'
 import { steps } from '../content/12-steps.js'
-import CallToAction from '@components/CallToAction.astro'
 ---
 
 <DefaultLayout title="Home">
@@ -19,7 +18,7 @@ import CallToAction from '@components/CallToAction.astro'
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         {
           steps.map((step) => (
-            <Feature icon={step.icon} title={step.title} number={step.number}>
+            <Feature icon={step.icon} title={step.title} number={step.number} footer={step.footer}>
               <Fragment
                 set:html={step.content
                   .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')

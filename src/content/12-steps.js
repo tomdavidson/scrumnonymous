@@ -1,74 +1,86 @@
 export const steps = [
   {
     "number": 1,
-    "title": "Admitting Powerlessness over Ceremonial Overhead",
-    "content": "We confess that our lives have become unmanageable: too many boards, too many \"ceremonies,\" and not enough working software. Recognizing that velocity is not a vital sign, we face the awkward truth—our process is sprinting in circles.",
+    "title": "Recognize Ceremonial Overhead for What It Is: Pointless Waste",
+    "content": "Scrum ceremonies pile up like unpaid invoices, but rarely move work forward. Admit that rituals—standups-about-standups, obsession over velocity, aimless retrospectives—are a drag on real progress. Recognize every moment spent on prescribed process that does not directly deliver value as organizational self-sabotage.",
+    "footer": "Eliminate Waste",
     "icon": "lucide:ban"
   },
   {
     "number": 2,
-    "title": "Coming to Believe in a Higher Power Called Flow",
-    "content": "We acknowledge that **continuous flow**—not two-week chunks of work-in-progress—is capable of restoring sanity. Lean teaches us to keep work small, limit WIP and let value move like tap water instead of dripping from a broken faucet.",
+    "title": "Accept That “Flow” Beats Arbitrary Timeboxes.",
+    "content": "Sprints and pre-scheduled planning windows are artificial bottlenecks. Instead, let work flow continuously and limit work-in-progress: the simplest path to speed. Features shouldn't wait for the next “ceremonial window,” nor should throughput be constrained by someone's calendar.",
+    "footer": "Deliver Fast, Optimize the Whole",
     "icon": "lucide:trending-up"
   },
   {
     "number": 3,
-    "title": "Turning Our Will Over to the Value Stream",
-    "content": "We decide to abandon the Product-Backlog-as-Life-Purpose mindset and instead optimize the *whole* value stream. If a task can't be tied to customer value, it goes to the backlog graveyard—no ceremony required.",
+    "title": "Abandon the Backlog as a Monument to Indecision",
+    "content": "Most backlogs are graveyards, not gardens. If a ticket sits unworked for months, you're fooling no one—it's dead. Stop grooming for the sake of it. Ruthlessly trim: only keep commitments truly tied to customer value. Optimize across the whole system, not to fill a never-ending bucket.",
+    "footer": "Optimize the Whole",
     "icon": "lucide:git-commit"
   },
   {
     "number": 4,
-    "title": "Making a Searching and Fearless Waste Inventory",
-    "content": "Armed with a Kanban board and a relentless eye, we list every form of waste: partially done work, extra features, hand-offs, context switching, queueing, defects. Yes, that daily thirty-minute \"grooming\" meeting counts as waste, too.",
+    "title": "Expose All Process Waste, No Matter How Sacred",
+    "content": "Stop defending any activity, document, or meeting just because it's “in the framework.” Inventory the real cost of recurring meetings, handoffs, estimates, test plans nobody reads, and tickets for compliance's sake. Name the waste, tally its cost, and stage a public execution.",
+    "footer": "Eliminate Waste",
     "icon": "lucide:trash-2"
   },
   {
     "number": 5,
-    "title": "Publicly Admitting Our Process Sins",
-    "content": "We stand before our team and confess: We treated story points like legal tender. We measured progress by ticket count, not customer outcomes. We treated every sprint review like a Broadway show for stakeholders. Catharsis complete, we shred the last burn-down chart.",
+    "title": "Publicly Own the Specific Harms of Your Process Choices",
+    "content": "Confess to your team and stakeholders how burn-down charts, “resource leveling,” and gamed metrics misled decision-makers, hurt morale, and led people astray. Take real responsibility for prioritizing fictional progress and vanity metrics over actual customer value.",
+    "footer": "Respect People",
     "icon": "lucide:megaphone"
   },
   {
     "number": 6,
-    "title": "Becoming Ready to Eliminate Story Points Forever",
-    "content": "We prepare to let go of pseudo-scientific estimation rituals. Story points promised accuracy but delivered only heated debates over Fibonacci numbers. The team vows never again to confuse relative sizing with meteorology.",
+    "title": "Commit to Destroying Story Points and the Pseudoscience of Estimation",
+    "content": "Story point debates are a collective delusion—there's no scientific basis, consistency, or predictive power. Replace estimation theater with empirical metrics, like throughput and cycle time, that stand up to scrutiny and inform actionable planning.",
+    "footer": "Eliminate Waste, Create Knowledge",
     "icon": "lucide:infinity"
   },
   {
     "number": 7,
-    "title": "Humbly Embracing Evidence-Based Forecasting",
-    "content": "Out go planning-poker séances; in come **Monte Carlo simulations** run against historical throughput. Forecasts become confidence ranges, not commitments, and management discovers that probability distributions are less embarrassing than missed deadlines.",
+    "title": "Switch to Evidence, Not Intuition, for Forecasts and Delivery Promises",
+    "content": "Skip the poker games. If you have historical data, run simulations (yes, including Monte Carlo). If you don't, admit it and start measuring now. Making commitments based on guesswork is wishful thinking, not professionalism.",
+    "footer": "Create Knowledge, Defer Commitment",
     "icon": "lucide:bar-chart-2"
   },
   {
     "number": 8,
-    "title": "Listing All Stakeholders We Have Misled with Velocity",
-    "content": "We jot down the names of product owners, directors, and unfortunate interns who believed a velocity chart predicted delivery dates. Awareness that we gamed the metric is the first sign of healing.",
+    "title": "List Everyone Hurt By “Agile Theater” and Meaningless Progress",
+    "content": "Acknowledge the product owners, engineers, managers, and customers who believed in your metrics, only to be shocked by missed deadlines and crushed expectations. Recognize Agile theater for what it is: a trust-destroyer, not a trust-builder.",
+    "footer": "Respect People",
     "icon": "lucide:users"
   },
   {
     "number": 9,
-    "title": "Making Amends by Showing Real Metrics",
-    "content": "Instead of slide decks brimming with \"95% sprint goal achieved,\" we present lead-time scatter plots, cumulative-flow diagrams, and user-experience metrics. Stakeholders learn to love data that exposes system bottlenecks rather than hides them.",
+    "title": "Make Restitution by Exposing Real System Constraints",
+    "content": "Replace status updates and percent-complete dog-and-pony shows with hard system data: cycle time scatterplots, bottleneck analysis, actual customer outcomes. Give people the facts—warts and all—so they can steer, not guess.",
+    "footer": "Create Knowledge, Build Quality In",
     "icon": "lucide:presentation"
   },
   {
     "number": 10,
-    "title": "Continuing Daily Value-Stream Reflection",
-    "content": "Each day we inspect flow efficiency, adjust WIP limits, and pull the Andon cord when work stalls—no need for a time-boxed retrospective to admit we're stuck. Continuous improvement becomes baked in, not bolted on.",
+    "title": "Institute Relentless, Evidence-based Continuous Improvement",
+    "content": "Daily, weekly, always: pursue process tweaks and experiments that are proven with data, not post-it note platitudes. If a change doesn't improve cycle time, value, or quality, it doesn't stick. Improvement is the default, not the retrospective hand-wringing.",
+    "footer": "Optimize the Whole, Build Quality In",
     "icon": "lucide:repeat"
   },
   {
     "number": 11,
-    "title": "Seeking Knowledge of Lean Principles Through Gemba Walks",
-    "content": "We regularly visit the place where code becomes value—observing tests, deployments, and customer feedback loops. The team resists Zoom-driven stand-ups that devolve into status theater; face-to-face Gemba chats reveal real impediments.",
+    "title": "Abandon Remote Micromanagement and Witness Real Work in the Gemba",
+    "content": "Get out of static “status” meetings and go see the work where it happens. Direct observation cuts through theater and reveals the system's true pain points, letting teams learn, adapt, and fix in real time.",
+    "footer": "Create Knowledge, Respect People",
     "icon": "lucide:footprints"
   },
   {
     "number": 12,
-    "title": "Carrying the Lean Message to Other Scrum Refugees",
-    "content": "Having had a paradigm shift, we evangelize **LSD's seven principles**—eliminate waste, build quality in, create knowledge, defer commitment, deliver fast, respect people, optimize the whole. We show that Lean is not a cult; it's simply common sense framed as continuous improvement.",
+    "title": "Share, Don't Preach: Help Others Escape Rituals and Embrace Real Change",
+    "content": "Your job is not evangelism for a new dogma. It's sharing tools, data, and stories about what actually works: eliminating waste, building in quality, and prioritizing real value. Offer support, not slogans, to teams sick of zombie Agile.",
+    "footer": "Respect People, Optimize the Whole",
     "icon": "lucide:message-circle"
   }
 ]
