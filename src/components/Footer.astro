@@ -1,5 +1,6 @@
 ---
 import ExternalLink from './ExternalLink.astro'
+import CallToAction from '@components/CallToAction.astro'
 import Logo from './Logo.astro'
 import ContributorList from './ContributorList.astro'
 
@@ -12,6 +13,14 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer>
+  <div id="get-help">
+    <CallToAction
+      title="Need a Sponsor?"
+      content="If you feel the sprint treadmill dragging you back, hey@scrumnonymous.org. Volunteers are standing by with Monte Carlo spreadsheets, Kanban, and a shoulder to cry on when someone schedules yet another backlog-refinement session.<br/><br/>Together we can stay Scrum-free—one day, one flow unit at a time."
+      link="mailto:hey@scrumnonymous.org"
+      linkText="Contact"
+    />
+  </div>
   <section class="py-20">
     <h2 class="sr-only">Footer</h2>
     <div class="container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
