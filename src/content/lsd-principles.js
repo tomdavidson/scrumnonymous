@@ -2,43 +2,43 @@ export const principles = [
     {
         "number": 1,
         "title": "Eliminate Waste",
-        "content": "Anything that doesn’t add value to the customer is waste. This includes partially done work, extra features, and unnecessary processes.",
+        "content": "	Remove anything in your process that doesn’t directly contribute to delivering value to the customer.",
         "icon": "lucide:trash-2"
     },
     {
         "number": 2,
-        "title": "Build Quality In",
-        "content": "Quality should be built into the product, not inspected in later. This means focusing on practices like test-driven development and continuous integration.",
+        "title": "Amplify learning",
+        "content": "Create feedback loops and opportunities to quickly learn from experience, improving with each iteration.",
         "icon": "lucide:gem"
     },
     {
         "number": 3,
-        "title": "Create Knowledge",
-        "content": "The process of building software is a process of discovery. We should aim to create a learning environment where knowledge is shared and amplified.",
+        "title": "Decide as late as possible",
+        "content": "Keep decisions open as long as practical, allowing you to base choices on the best available information.",
         "icon": "lucide:book-open"
     },
     {
         "number": 4,
-        "title": "Defer Commitment",
-        "content": "Avoid making irreversible decisions for as long as possible. This allows for more flexibility and better-informed choices.",
+        "title": "Deliver as fast as possible",
+        "content": "Release working software frequently so you can gather real-world feedback and respond quickly to change.",
         "icon": "lucide:timer-off"
     },
     {
         "number": 5,
-        "title": "Deliver Fast",
-        "content": "Deliver value to the customer as quickly as possible. This reduces the feedback loop and allows for faster learning and adaptation.",
+        "title": "Empower the team",
+        "content": "	Provide teams with the authority and trust to make decisions, enabling them to solve problems directly.",
         "icon": "lucide:rocket"
     },
     {
         "number": 6,
-        "title": "Respect People",
-        "content": "Empower the team by giving them the autonomy and respect they need to do their best work. Encourage collaboration and open communication.",
+        "title": "Build integrity in",
+        "content": "Integrate quality practices into every step of development to ensure the product stays robust and consistent.",
         "icon": "lucide:users"
     },
     {
         "number": 7,
         "title": "Optimize the Whole",
-        "content": "Focus on optimizing the entire value stream, from concept to delivery. Avoid local optimizations that may negatively impact the overall system.",
+        "content": "Focus on improving the entire workflow and system, not just individual parts, to maximize value delivery.",
         "icon": "lucide:workflow"
     }
 ]
