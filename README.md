@@ -1,6 +1,6 @@
 # Scrumnonymous
 
-Scrumnonymous is a curated collection of articles and blog posts that critique and analyze the common pitfalls and misunderstandings of Scrum and agile methodologies. This project aims to provide a platform for diverse perspectives on software development practices.
+Scrumnonymous is a curated collection of articles and blog posts that promote Lean Software Development with critique and analysis of Scrum and agile pitfalls and misunderstandings.
 
 ## Contributing an Anthology
 
