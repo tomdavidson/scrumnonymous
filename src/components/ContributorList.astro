@@ -8,8 +8,8 @@ interface Contributor {
   avatar_url: string
 }
 
-const GH_OWNER = Astro.props.owner || 'your-org-or-username'
-const GH_REPO = Astro.props.repo || 'your-repo-name'
+const GH_OWNER = Astro.props.owner
+const GH_REPO = Astro.props.repo
 const CACHE_FILE = path.resolve(`./src/cache/${GH_OWNER}-${GH_REPO}-contributors.json`)
 const CACHE_TTL = 1000 * 60 * 60 * 24 // 24 hours
 
